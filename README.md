@@ -1,0 +1,1 @@
+# SdaLdz24Programowanie2
