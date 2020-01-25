@@ -8,10 +8,14 @@ import org.junit.Test;
 public class RectangleTest {
 
     Rectangle rectangle;
+    private static final int DEFAULT_WIDHT = 3;
+    private static final int DEFAULT_HIGHT = 4;
+    private static final int DEFAULT_AREA = 12;
+    private static final int DEFAULT_PERIMETER = 14;
 
     @Before
     public void setUpRectangle() {
-        rectangle = new Rectangle(3, 4);
+        rectangle = new Rectangle(DEFAULT_WIDHT, DEFAULT_HIGHT);
     }
 
     @After
@@ -21,13 +25,13 @@ public class RectangleTest {
 
     @Test
     public void testCalculateArea() {
-        Assert.assertEquals(12, rectangle.calculateArea());
+        Assert.assertEquals(DEFAULT_AREA, rectangle.calculateArea());
     }
 
 
     @Test
     public void testcalculatePerimeter() {
-        Assert.assertEquals(14, rectangle.calculatePerimeter());
+        Assert.assertEquals(DEFAULT_PERIMETER, rectangle.calculatePerimeter());
     }
 
     @Test(expected = IllegalArgumentException.class)
